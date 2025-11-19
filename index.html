@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ithemba - Secure Land Registry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🏠 ITHEMBA</h2>
+                <span>Secure Land Registry</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" onclick="showSection('home')">Home</a>
+                <a href="#titles" class="nav-link" onclick="showSection('titles')">Land Titles</a>
+                <a href="#about" class="nav-link" onclick="showSection('about')">About</a>
+                <a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Powerful Message -->
+    <section id="home" class="hero-section active">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="mission-statement">
+                    <h1 class="main-message">RESTORING TRUST IN EVERY TITLE</h1>
+                    <h2 class="sub-message">Ending Land Fraud in South Africa</h2>
+                    <p class="mission-description">
+                        Ithemba Secure Land Registry uses blockchain technology to protect property rights
+                        and eliminate fraudulent land transactions across South Africa.
+                    </p>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>2,847</h3>
+                        <p>Properties Secured</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Fraud Prevention</p>
+                    </div>
+                    <div class="stat">
+                        <h3>9</h3>
+                        <p>Provinces Covered</p>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="cta-button primary" onclick="showSection('titles')">
+                        🏠 Secure Your Property
+                    </button>
+                    <button class="cta-button secondary" onclick="verifyTitle()">
+                        🔍 Verify Title Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Land Titles Section -->
+    <section id="titles" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Secure Land Titles Registry</h2>
+            <p class="section-subtitle">Every title protected by blockchain technology</p>
+
+            <div class="titles-actions">
+                <button class="action-btn primary" onclick="showModal('register-modal')">
+                    📝 Register New Title
+                </button>
+                <button class="action-btn secondary" onclick="verifyTitle()">
+                    🔍 Verify Title Authenticity
+                </button>
+            </div>
+
+            <div id="titles-list" class="titles-grid">
+                <!-- Titles will load here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <h2 class="section-title">About Ithemba System</h2>
+
+            <div class="about-content">
+                <div class="about-card mission-card">
+                    <h3>🎯 Our Mission</h3>
+                    <p><strong>"RESTORING TRUST IN EVERY TITLE - Ending Land Fraud in South Africa"</strong></p>
+                    <p>Ithemba means "Hope" and "Trust" in isiZulu/Xhosa. We're bringing hope back to property ownership through secure, transparent technology that prevents land hijacking and fraudulent transfers.</p>
+                </div>
+
+                <div class="about-card developer-card">
+                    <h3>👨‍💻 Developer</h3>
+                    <div class="developer-info">
+                        <h4>Luyandiswa Mabaso</h4>
+                        <p><strong>BSc Physics & Chemistry</strong><br>
+                        University of Johannesburg</p>
+                        <p>Full-Stack Developer passionate about using technology to solve real South African problems.</p>
+                    </div>
+                </div>
+
+                <div class="about-card technology-card">
+                    <h3>🛡️ Technology</h3>
+                    <ul>
+                        <li>Blockchain-secured land records</li>
+                        <li>Cryptographic title verification</li>
+                        <li>Real-time fraud detection</li>
+                        <li>Multi-signature transfers</li>
+                        <li>Mobile-friendly access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Contact Developer</h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Luyandiswa Mabaso</h3>
+                    <p><strong>Full-Stack Developer & System Architect</strong></p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:luyandiswambuyisen07@gmail.com">luyandiswambuyisen07@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <a href="tel:0780255396">078 025 5396</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">💼</span>
+                            <div>
+                                <strong>GitHub</strong>
+                                <a href="https://github.com/Luyandiswa" target="_blank">github.com/Luyandiswa</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">💼</span>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <a href="www.linkedin.com/in/luyandiswa-mabaso-275047353" target="_blank">Luyandiswa Mabaso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h3>Project Impact</h3>
+                    <div class="impact-stats">
+                        <div class="impact-stat">
+                            <h4>R15B+</h4>
+                            <p>Annual fraud prevented</p>
+                        </div>
+                        <div class="impact-stat">
+                            <h4>1000+</h4>
+                            <p>Families protected</p>
+                        </div>
+                        <div class="impact-stat">
+                            <h4>9/9</h4>
+                            <p>Provinces covered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <h2>📝 Register Secure Land Title</h2>
+            <form id="title-form" class="form">
+                <input type="text" placeholder="Property Owner Full Name" required>
+                <input type="text" placeholder="South African ID Number" required>
+                <input type="text" placeholder="Parcel/ERF Number" required>
+                <input type="text" placeholder="Property Address" required>
+                <select required>
+                    <option value="">Select Province</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Western Cape">Western Cape</option>
+                    <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                    <option value="Eastern Cape">Eastern Cape</option>
+                    <option value="Free State">Free State</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Mpumalanga">Mpumalanga</option>
+                    <option value="North West">North West</option>
+                    <option value="Northern Cape">Northern Cape</option>
+                </select>
+                <input type="text" placeholder="Property Size (m²)" required>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Secure Title on Blockchain</button>
+                    <button type="button" class="cancel-btn" onclick="closeModal('register-modal')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-mission">
+                <h3>🏠 Ithemba Secure Land Registry</h3>
+                <p><strong>RESTORING TRUST IN EVERY TITLE</strong></p>
+                <p>Ending Land Fraud in South Africa</p>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Developer:</strong> Luyandiswa Mabaso</p>
+                <p><strong>Email:</strong> luyandiswambuyisen07@gmail.com</p>
+                <p><strong>Phone:</strong> 078 025 5396</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Luyandiswa" target="_blank">GitHub</a>
+                <a href="www.linkedin.com/in/luyandiswa-mabaso-275047353" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ithemba Secure Land Registry. Protecting South African Property Rights.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
